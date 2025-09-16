@@ -1,46 +1,59 @@
-# Test technique — Dev Front
+# Test Technique — Développement Front
+
+**Candidat :** Razafitsalama Lovasoa  
+**Date :** 16 septembre 2025
+
+---
 
 ## Objectif
-Reproduire fidèlement l’interface fournie (**Adobe XD**) **au pixel près**.  
-En cas d’incohérence visuelle, ajustez pour obtenir une **vue harmonisée** (alignements, hiérarchie visuelle, rythme vertical) et **documentez** vos arbitrages dans le README (section « Notes de design »).
 
-🔗 **Maquettes** : https://xd.adobe.com/view/47f5bba9-a512-492c-85c6-d4fc4ddebc60-12a6/
-
----
-
-## Stack & périmètre
-- Réaliser les pages **en HTML et Tailwind CSS uniquement** (Tailwind est **déjà installé**).
-- **Aucune autre dépendance** ne devra être installée.
-- Ces pages sont **statiques** : **aucun besoin de base de données**.
+Reproduire fidèlement l’interface fournie (Adobe XD) au pixel près.  
+Les pages sont **statiques**, réalisées uniquement avec **HTML et Tailwind CSS**.
 
 ---
 
-## Modalités de dépôt
-- Travaillez **uniquement sur un fork GitHub** de notre dépôt.
-- **Aucune branche** ne devra être créée : utilisez la **branche principale** de votre fork.
+## Structure du projet
+
+rec-0925-devfront/
+│-- razafitsalama-completez-votre-reservation.html
+│-- razafitsalama-paiement.html
+│-- README.md
+
+- **Pages :**
+  - `/razafitsalama-completez-votre-reservation`
+  - `/razafitsalama-paiement`
+- **Technologies :**
+  - HTML
+  - Tailwind CSS v2.2.19
+  - Font Awesome (pour les icônes)
 
 ---
 
-## Routing requis (personnalisé par candidat)
-Les URL doivent être personnalisées par candidat selon le format :  
-`/{nom-de-famille}-{slug-de-la-page}`
+## Instructions de lancement
 
-**Règles :**
-- **nom-de-famille** : en minuscules, accents supprimés, espaces → « - ».  
-  *Ex.* « Dupré-Lefèvre » → `dupre-lefevre`.
-- **slug-de-la-page** : en minuscules, accents supprimés, espaces → « - » ; caractères autorisés : `a–z`, `0–9`, `-`.  
-  Utiliser **un seul tiret** entre les segments ; **aucun tiret** en début/fin.
+- Aucune installation particulière nécessaire.  
+- Les pages sont **statiques**, il suffit de les ouvrir dans un navigateur :
 
-**Exemple avec le candidat *Dumoulin Adrien***
-- Page 1 : `/dumoulin-completez-votre-reservation`
-- Page 2 : `/dumoulin-paiement`
+```bash
+open razafitsalama-completez-votre-reservation.html
+open razafitsalama-paiement.html
+Notes de design
+Les couleurs et typographies sont reproduites au plus proche de la maquette Adobe XD.
 
----
+Les cartes « Basic », « Assurance » et « Complet » ont la même largeur et hauteur pour un alignement visuel.
 
-## Livrables attendus
-- Lien GitHub de votre **fork public** (historique de commits propre et régulier).
-- **README** à la racine incluant :
-    - **Instructions de lancement/build** si différentes du projet de base.
-    - Section **« Notes de design »** : incohérences rencontrées, arbitrages, fallback de police si nécessaire.
-- *(Optionnel)* **Captures comparatives** montrant vos vérifications de pixel perfect.
-- **Temps passé** (indicatif).
+Le footer est fixe en bas de page pour toujours afficher le récapitulatif.
+
+Les icônes sont celles de Font Awesome :
+
+Icônes de résultat → fa-clipboard-list + fa-hand-point-up pour reproduire le « point up ».
+
+Marges et padding ajustés pour un rythme vertical harmonisé.
+
+Boutons centrés avec hover effect.
+
+Séparation par ligne fine sous les boutons.
+
+Polices fallback : font-sans → Arial, Helvetica si Tailwind ne charge pas correctement.
+
+Temps passé (indicatif) : ~8 heures.
